@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rockit | Rock Sealing Tech</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* animated gradient background */
+  background: linear-gradient(-45deg, #0f3460, #533483, #44A194, #0f9b8e);
+  background-size: 200% 200%;
+  animation: gradientMove 18s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+a {
+      color: #0074D9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+/* content card */
+.card {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  max-width: 805px;
+  width: 90%;
+  backdrop-filter: blur(6px);
+}
+
+/* bubbles layer */
+.bubbles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  animation: rise 18s linear infinite;
+}
+
+/* vary size, position, speed for each bubble */
+.bubble:nth-child(1) {
+  left: 10%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 16s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  left: 25%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+  left: 40%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 14s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+  left: 55%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 22s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(5) {
+  left: 70%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 18s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(6) {
+  left: 85%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 24s;
+  animation-delay: 5s;
+}
+
+.bubble:nth-child(7) {
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  animation-duration: 15s;
+  animation-delay: 7s;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-50vh) translateX(15px) scale(1.05);
+  }
+  100% {
+    transform: translateY(-110vh) translateX(-15px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+ </style>
+</head>
+
+
+<body>
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <div class="card">
+    <img src="Rockit Logo RGB.svg">
+    <h1>Mineral Sealing Technology for </br>Well Integrity and Water Shut-Off</h1>
+    </br>
+    <h3>Tech for operators who don't tolerate wells bleed methane and water where they don’t belong.</h3>
+    </br>
+    <p>Field pilot is coming soon.</br>
+    Reach out at <a href="mailto:info@rockit.rocks">info@rockit.rocks</a></p>
+  </div>
+</body>
